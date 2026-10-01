@@ -12,16 +12,13 @@ import com.poo.herenciapolimorfismo.modelo.Pajaro;
 import com.poo.herenciapolimorfismo.modelo.PerroGrande;
 /**
  *
- * @author taidy
+ * @author Juan
  */
 
 public class HerenciaPolimorfismo {
 
     public static void main(String[] args) {
 
-        // Polimorfismo:
-        // referencia de tipo Animal,
-        // pero objetos de diferentes clases hijas.
 
         Animal mascota1 = new Perro();
         Animal mascota2 = new Gato();
@@ -73,7 +70,7 @@ public class HerenciaPolimorfismo {
         System.out.println("Peso: "
                 + perroGrande.getPesoKg() + " kg");
 
-        // Polimorfismo usando un arreglo de Animal
+   
         Animal[] animales = {
             new Perro("Rex"),
             new Pez("Nemo"),

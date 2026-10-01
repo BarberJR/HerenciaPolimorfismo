@@ -4,10 +4,7 @@
  */
 package com.poo.herenciapolimorfismo.modelo;
 
-/**
- *
- * @author taidy
- */
+
 public class Animal {
     
     private String nombre;

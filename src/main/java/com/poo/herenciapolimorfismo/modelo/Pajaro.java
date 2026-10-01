@@ -4,10 +4,7 @@
  */
 package com.poo.herenciapolimorfismo.modelo;
 
-/**
- *
- * @author Estudiante
- */
+
 public class Pajaro extends Animal{
     private int alturaVuelo;
 
@@ -16,7 +13,7 @@ public class Pajaro extends Animal{
         this.alturaVuelo = 0;
     }
     public void volar() {
-        this.alturaVuelo += 10; // Aumenta la altura
+        this.alturaVuelo += 10; 
         System.out.println(getNombre() + " está volando a una altura de " + alturaVuelo + " metros.");
     }
     @Override

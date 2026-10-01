@@ -4,10 +4,6 @@
  */
 package com.poo.herenciapolimorfismo.modelo;
 
-/**
- *
- * @author taidy
- */
 
 public class Perro extends Animal {
 

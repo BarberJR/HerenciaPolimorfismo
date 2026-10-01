@@ -4,10 +4,6 @@
  */
 package com.poo.herenciapolimorfismo.modelo;
 
-/**
- *
- * @author juan_
- */
 
 
 public class Pez extends Animal {

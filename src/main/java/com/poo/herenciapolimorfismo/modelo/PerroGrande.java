@@ -4,10 +4,6 @@
  */
 package com.poo.herenciapolimorfismo.modelo;
 
-/**
- *
- * @author Estudiante
- */
 
 public class PerroGrande extends Perro {
 
