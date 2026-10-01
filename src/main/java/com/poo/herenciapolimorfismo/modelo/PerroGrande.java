@@ -8,6 +8,22 @@ package com.poo.herenciapolimorfismo.modelo;
  *
  * @author Estudiante
  */
-public class PerroGrande {
-    
+
+public class PerroGrande extends Perro {
+
+    private int pesoKg;
+
+    public PerroGrande(String nombre, int edad, String raza, int pesoKg) {
+        super(nombre, edad, raza); // Llama al constructor de Perro
+        this.pesoKg = pesoKg;
+    }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println("¡¡GUAU!!");
+    }
+
+    public int getPesoKg() {
+        return pesoKg;
+    }
 }

@@ -8,41 +8,87 @@ import com.poo.herenciapolimorfismo.modelo.Animal;
 import com.poo.herenciapolimorfismo.modelo.Gato;
 import com.poo.herenciapolimorfismo.modelo.Perro;
 import com.poo.herenciapolimorfismo.modelo.Pez;
-
+import com.poo.herenciapolimorfismo.modelo.Pajaro;
+import com.poo.herenciapolimorfismo.modelo.PerroGrande;
 /**
  *
  * @author taidy
  */
+
 public class HerenciaPolimorfismo {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        // Variable de tipo Animal (padre)
-// Pero objeto real de tipo Perro (hijo)
-Animal mascota1 = new Perro();
-Animal mascota2 = new Gato();
-Animal mascota3 = new Pez();
 
-// El método ejecutado depende del 
-// tipo REAL del objeto, no de Animal
-mascota1.hacerSonido(); 
-  //Imprime: ¡Guau guau! (es Perro)
-mascota2.hacerSonido();
-  //Imprime: ¡Miau miau! (es Gato)
-// Mismo mensaje, DIFERENTES resultados
-mascota2.hacerSonido();
- //Imprime: ¡Glu glu! (es Pez)
+        // Polimorfismo:
+        // referencia de tipo Animal,
+        // pero objetos de diferentes clases hijas.
 
-Animal[] animales = {
-  new Perro("Rex"),
-  new Pez ("Dory"),
-  new Gato("Silvestre"),
-  new Animal("Piolin")
-};
+        Animal mascota1 = new Perro();
+        Animal mascota2 = new Gato();
+        Animal mascota3 = new Pez("Nemo");
+        Animal mascota4 = new Pajaro("Piolin");
+        Animal mascota5 = new PerroGrande(
+                "Thor",
+                5,
+                "Gran Danes",
+                40
+        );
 
-for (Animal animal : animales) {
-  animal.hacerSonido(); // Polimorfismo
-}
+        mascota1.hacerSonido();
+        mascota2.hacerSonido();
+        mascota3.hacerSonido();
+        mascota4.hacerSonido();
+        mascota5.hacerSonido();
 
+        // Pajaro
+        Pajaro pajaro = new Pajaro("Paco");
+
+        pajaro.volar();
+        pajaro.volar();
+
+        // Pez
+        Pez pez = new Pez("Dory");
+
+        pez.nadar();
+        pez.nadar();
+
+        pez.comer("algas", true);
+
+        // PerroGrande
+        PerroGrande perroGrande = new PerroGrande(
+                "Max",
+                4,
+                "Pastor Aleman",
+                35
+        );
+
+        perroGrande.hacerSonido();
+
+        System.out.println("Edad: "
+                + perroGrande.getEdad());
+
+        System.out.println("Raza: "
+                + perroGrande.getRaza());
+
+        System.out.println("Peso: "
+                + perroGrande.getPesoKg() + " kg");
+
+        // Polimorfismo usando un arreglo de Animal
+        Animal[] animales = {
+            new Perro("Rex"),
+            new Pez("Nemo"),
+            new Gato("Silvestre"),
+            new Pajaro("Piolin"),
+            new PerroGrande(
+                    "Rocky",
+                    6,
+                    "Rottweiler",
+                    45
+            )
+        };
+
+        for (Animal animal : animales) {
+            animal.hacerSonido();
+        }
     }
 }
